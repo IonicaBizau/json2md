@@ -30,7 +30,7 @@
     "h_img": "http://i.imgur.com/uj64JFw.png",
     "description": "If you're looking to use this on the client side, that's also possible. Check out the [`dist`](/dist) directory.",
     "usages": [
-      "I am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah)"
+      "I am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah)."
     ]
   },
   "dependencies": {},

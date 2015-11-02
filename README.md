@@ -137,7 +137,7 @@ Have an idea? Found a bug? See [how to contribute][contributing].
 ## Where is this library used?
 If you are using this library in one of your projects, add it in this list. :sparkles:
 
- - I am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah)
+ - I am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah).
 
 ## License
 
