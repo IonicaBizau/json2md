@@ -3,6 +3,8 @@
 # json2md [![Support this project][donate-now]][paypal-donations]
 A JSON to Markdown converter.
 
+If you're looking to use this on the client side, that's also possible. Check out the [`dist`](/dist) directory.
+
 ## Installation
 
 ```sh
