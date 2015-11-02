@@ -1,0 +1,29 @@
+{
+  "name": "json2md",
+  "version": "1.0.0",
+  "description": "A JSON to Markdown converter.",
+  "main": "lib/index.js",
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/IonicaBizau/json2md.git"
+  },
+  "keywords": [
+    "json",
+    "markdown",
+    "converter",
+    "generator"
+  ],
+  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/json2md/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/json2md#readme"
+}
