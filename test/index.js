@@ -21,7 +21,7 @@ it("should support blockquotes", function (cb) {
 it("should support images", function (cb) {
     Assert.equal(JsonToMarkdown({
         img: {
-            source; "source"
+            source: "source"
           , title: "title"
         }
     }), "![title](source)");
