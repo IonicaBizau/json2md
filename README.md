@@ -11,9 +11,9 @@ $ npm i json2md
 
 ```js
 // Dependencies
-var JsonToMarkdown = require("json2md");
+var json2md = require("json2md");
 
-console.log(JsonToMarkdown([
+console.log(json2md([
     { h1: "JSON To Markdown" }
   , { blockquote: "A JSON to Markdown converter." }
   , { img: [
@@ -49,12 +49,76 @@ console.log(JsonToMarkdown([
       }
     }
 ]));
+// =>
+// # JSON To Markdown
+// > A JSON to Markdown converter.
+//
+// ![Some image](https://example.com/some-image.png)
+//
+// ![Another image](https://example.com/some-image1.png)
+//
+// ![Yet another image](https://example.com/some-image2.png)
+//
+// ## Features
+//
+//  - Easy to use
+//  - You can programatically generate Markdown content
+//  - ...
+//
+// ## How to contribute
+//
+//  1. Fork the project
+//  2. Create your branch
+//  3. Raise a pull request
+//
+// ## Code blocks
+//
+// Below you can see a code block example.
+//
+// ```js
+// function sum (a, b) {
+//    return a + b;
+// }
+// sum(1, 2);
+// ```
 ```
 
 ## Documentation
 
-### `JsonToMarkdown(data, prefix)`
+### `json2md(data, prefix)`
 Converts a JSON input to markdown.
+
+**Supported elements**
+
+| Type         | Element            | Data                                                                                        | Example                                                                                      |
+|--------------|--------------------|---------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| `h1`         | Heading 1          | The heading text as string.                                                                 | `{ h1: "heading 1" }`                                                                        |
+| `h2`         | Heading 2          | The heading text as string.                                                                 | `{ h2: "heading 2" }`                                                                        |
+| `h3`         | Heading 3          | The heading text as string.                                                                 | `{ h3: "heading 3" }`                                                                        |
+| `h4`         | Heading 4          | The heading text as string.                                                                 | `{ h4: "heading 4" }`                                                                        |
+| `h5`         | Heading 5          | The heading text as string.                                                                 | `{ h5: "heading 5" }`                                                                        |
+| `h6`         | Heading 6          | The heading text as string.                                                                 | `{ h6: "heading 6" }`                                                                        |
+| `p`          | Paragraphs         | The paragraph text as string or array (multiple paragraphs).                                | `{ p: "Hello World"}` or multiple paragraphs: `{ p: ["Hello", "World"] }`                    |
+| `blockquote` | Blockquote         | The blockquote as string or array (multiple blockquotes)                                    | `{ blockquote: "Hello World"}` or multiple blockquotes: `{ blockquote: ["Hello", "World"] }` |
+| `img`        | Image              | An object or an array of objects containing the `title` and `source` fields.                | `{ img: { title: "My image title", source: "http://example.com/image.png" } }`               |
+| `ul`         | Unordered list     | An array of strings representing the items.                                                 | `{ ul: ["item 1", "item 2"] }`                                                               |
+| `ol`         | Ordered list       | An array of strings representing the items.                                                 | `{ ol: ["item 1", "item 2"] }`                                                               |
+| `code`       | Code block element | An object containing the `language` (`String`) and `content` (`Array` or `String`)  fields. |                                                                                              |
+
+You can extend the `json2md.converters` object to support your custom types.
+
+```js
+json2md.converters.sayHello = function (input, json2md) {
+   return "Hello " + input + "!";
+};
+```
+
+Then you can use it:
+
+```js
+json2md({ sayHello: "World" });
+// => "Hello World!"
+```
 
 #### Params
 - **Array|Object|String** `data`: The input JSON data.
