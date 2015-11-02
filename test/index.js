@@ -15,7 +15,7 @@ it("should support headings", function (cb) {
 
 // Blockquote
 it("should support blockquotes", function (cb) {
-    Assert.equal(JsonToMarkdown({ blockquote: "Some content" }), "> Some content");
+    Assert.equal(JsonToMarkdown({ blockquote: "Some content" }), "> Some content\n");
     cb();
 });
 
@@ -26,7 +26,7 @@ it("should support images", function (cb) {
             source: "source"
           , title: "title"
         }
-    }), "![title](source)");
+    }), "![title](source)\n");
     cb();
 });
 
@@ -37,7 +37,7 @@ it("should support unordered lists", function (cb) {
             "item 1"
           , "item 2"
         ]
-    }), " - item 1\n - item 2");
+    }), "\n - item 1\n - item 2\n");
     cb();
 });
 
@@ -48,7 +48,7 @@ it("should support ordered lists", function (cb) {
             "item 1"
           , "item 2"
         ]
-    }), " 1. item 1\n 2. item 2");
+    }), "\n 1. item 1\n 2. item 2\n");
     cb();
 });
 
@@ -64,7 +64,7 @@ it("should support code blocks", function (cb) {
             , "sum(1, 2);"
             ]
         }
-    }), "```js\nfunction sum (a, b) {\n   return a + b;\n}\nsum(1, 2);");
+    }), "```js\nfunction sum (a, b) {\n   return a + b;\n}\nsum(1, 2);\n```");
     cb();
 });
 
@@ -75,6 +75,6 @@ it("should support paragraphs", function (cb) {
             "Two"
           , "Paragraphs"
         ]
-    }), "Two\nParagraphs");
+    }), "\nTwo\n\nParagraphs\n");
     cb();
 });
