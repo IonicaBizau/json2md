@@ -21,9 +21,19 @@
     "generator"
   ],
   "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
-  "license": "MIT",
+  "license": "KINDLY",
   "bugs": {
     "url": "https://github.com/IonicaBizau/json2md/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/json2md#readme"
+  "homepage": "https://github.com/IonicaBizau/json2md#readme",
+  "blah": {
+    "h_img": "http://i.imgur.com/uj64JFw.png",
+    "usages": [
+      "I am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah)"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  }
 }
