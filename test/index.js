@@ -1,27 +1,28 @@
-var JsonToMarkdown = require("../lib")
+// Dependencies
+var json2md = require("../lib")
   , Assert = require("assert")
   ;
 
 // Headings
 it("should support headings", function (cb) {
-    Assert.equal(JsonToMarkdown({ h1: "Heading 1" }), "# Heading 1");
-    Assert.equal(JsonToMarkdown({ h2: "Heading 2" }), "## Heading 2");
-    Assert.equal(JsonToMarkdown({ h3: "Heading 3" }), "### Heading 3");
-    Assert.equal(JsonToMarkdown({ h4: "Heading 4" }), "#### Heading 4");
-    Assert.equal(JsonToMarkdown({ h5: "Heading 5" }), "##### Heading 5");
-    Assert.equal(JsonToMarkdown({ h6: "Heading 6" }), "###### Heading 6");
+    Assert.equal(json2md({ h1: "Heading 1" }), "# Heading 1");
+    Assert.equal(json2md({ h2: "Heading 2" }), "## Heading 2");
+    Assert.equal(json2md({ h3: "Heading 3" }), "### Heading 3");
+    Assert.equal(json2md({ h4: "Heading 4" }), "#### Heading 4");
+    Assert.equal(json2md({ h5: "Heading 5" }), "##### Heading 5");
+    Assert.equal(json2md({ h6: "Heading 6" }), "###### Heading 6");
     cb();
 });
 
 // Blockquote
 it("should support blockquotes", function (cb) {
-    Assert.equal(JsonToMarkdown({ blockquote: "Some content" }), "> Some content\n");
+    Assert.equal(json2md({ blockquote: "Some content" }), "> Some content\n");
     cb();
 });
 
 // Images
 it("should support images", function (cb) {
-    Assert.equal(JsonToMarkdown({
+    Assert.equal(json2md({
         img: {
             source: "source"
           , title: "title"
@@ -32,7 +33,7 @@ it("should support images", function (cb) {
 
 // Unordered lists
 it("should support unordered lists", function (cb) {
-    Assert.equal(JsonToMarkdown({
+    Assert.equal(json2md({
         ul: [
             "item 1"
           , "item 2"
@@ -43,7 +44,7 @@ it("should support unordered lists", function (cb) {
 
 // Ordered lists
 it("should support ordered lists", function (cb) {
-    Assert.equal(JsonToMarkdown({
+    Assert.equal(json2md({
         ol: [
             "item 1"
           , "item 2"
@@ -54,7 +55,7 @@ it("should support ordered lists", function (cb) {
 
 // Code blocks
 it("should support code blocks", function (cb) {
-    Assert.equal(JsonToMarkdown({
+    Assert.equal(json2md({
         code: {
             language: "js"
           , content: [
@@ -70,11 +71,20 @@ it("should support code blocks", function (cb) {
 
 // Paragraphs
 it("should support paragraphs", function (cb) {
-    Assert.equal(JsonToMarkdown({
+    Assert.equal(json2md({
         p: [
             "Two"
           , "Paragraphs"
         ]
     }), "\nTwo\n\nParagraphs\n");
+    cb();
+});
+
+// Custom converters
+it("should support custom types", function (cb) {
+    json2md.converters.sayHello = function (input, json2md) {
+        return "Hello " + input + "!";
+    };
+    Assert.equal(json2md({ sayHello: "World" }), "Hello World!")
     cb();
 });

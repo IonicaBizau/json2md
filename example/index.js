@@ -1,7 +1,7 @@
 // Dependencies
-var JsonToMarkdown = require("../lib");
+var json2md = require("../lib");
 
-console.log(JsonToMarkdown([
+console.log(json2md([
     { h1: "JSON To Markdown" }
   , { blockquote: "A JSON to Markdown converter." }
   , { img: [
@@ -37,3 +37,35 @@ console.log(JsonToMarkdown([
       }
     }
 ]));
+// =>
+// # JSON To Markdown
+// > A JSON to Markdown converter.
+//
+// ![Some image](https://example.com/some-image.png)
+//
+// ![Another image](https://example.com/some-image1.png)
+//
+// ![Yet another image](https://example.com/some-image2.png)
+//
+// ## Features
+//
+//  - Easy to use
+//  - You can programatically generate Markdown content
+//  - ...
+//
+// ## How to contribute
+//
+//  1. Fork the project
+//  2. Create your branch
+//  3. Raise a pull request
+//
+// ## Code blocks
+//
+// Below you can see a code block example.
+//
+// ```js
+// function sum (a, b) {
+//    return a + b;
+// }
+// sum(1, 2);
+// ```
