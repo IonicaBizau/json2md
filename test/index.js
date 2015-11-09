@@ -88,3 +88,64 @@ it("should support custom types", function (cb) {
     Assert.equal(json2md({ sayHello: "World" }), "Hello World!")
     cb();
 });
+
+// Code blocks in lists
+it("should correctly indent code blocks in lists", function (cb) {
+    Assert.equal(json2md({
+        ol: [
+            [
+                "Copy the code below:",
+                {
+                    code: {
+                        language: "js"
+                      , content: [
+                          "function sum (a, b) {"
+                        , "   return a + b;"
+                        , "}"
+                        , "sum(1, 2);"
+                        ]
+                    }
+                }
+            ]
+        ]
+    }),
+`\n 1. Copy the code below:
+    \`\`\`js
+    function sum (a, b) {
+       return a + b;
+    }
+    sum(1, 2);
+    \`\`\`
+`   )
+    cb();
+});
+
+it("should correctly indent code blocks in unordered lists", function (cb) {
+    Assert.equal(json2md({
+        ul: [
+            [
+                "Copy the code below:",
+                {
+                    code: {
+                        language: "js"
+                      , content: [
+                          "function sum (a, b) {"
+                        , "   return a + b;"
+                        , "}"
+                        , "sum(1, 2);"
+                        ]
+                    }
+                }
+            ]
+        ]
+    }),
+`\n - Copy the code below:
+    \`\`\`js
+    function sum (a, b) {
+       return a + b;
+    }
+    sum(1, 2);
+    \`\`\`
+`   )
+    cb();
+});
