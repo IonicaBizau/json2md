@@ -1,6 +1,7 @@
 [![json2md](http://i.imgur.com/uj64JFw.png)](#)
 
 # json2md [![Support this project][donate-now]][paypal-donations]
+
 A JSON to Markdown converter.
 
 If you're looking to use this on the client side, that's also possible. Check out the [`dist`](/dist) directory.
@@ -137,13 +138,14 @@ Have an idea? Found a bug? See [how to contribute][contributing].
 ## Where is this library used?
 If you are using this library in one of your projects, add it in this list. :sparkles:
 
- - I am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah).
+I am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah).
 
 ## License
 
 [KINDLY][license] © [Ionică Bizău][website]
 
 [license]: http://ionicabizau.github.io/kindly-license/?author=Ionic%C4%83%20Biz%C4%83u%20%3Cbizauionica@gmail.com%3E&year=2015
+
 [website]: http://ionicabizau.net
 [paypal-donations]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RVXDDLKKLQRJW
 [donate-now]: http://i.imgur.com/6cMbHOC.png
