@@ -42,6 +42,16 @@ it("should support unordered lists", function (cb) {
     cb();
 });
 
+it("should support unordered lists with emphasis format", function (cb) {
+    Assert.equal(json2md({
+        ul: [
+            "<em>item 1</em>"
+          , "<bold>item 2</bold>"
+        ]
+    }), "\n - *item 1*\n - **item 2**\n");
+    cb();
+});
+
 // Ordered lists
 it("should support ordered lists", function (cb) {
     Assert.equal(json2md({
@@ -77,6 +87,16 @@ it("should support paragraphs", function (cb) {
           , "Paragraphs"
         ]
     }), "\nTwo\n\nParagraphs\n");
+    cb();
+});
+
+it("should support paragraphs with bold text", function (cb) {
+    Assert.equal(json2md({
+        p: [
+            "Two <bold>more words</bold>"
+          , "in this paragraph, <strong>right?</strong>"
+        ]
+    }), "\nTwo **more words**\n\nin this paragraph, **right?**\n");
     cb();
 });
 
