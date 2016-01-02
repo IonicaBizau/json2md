@@ -21,6 +21,10 @@
     "generator"
   ],
   "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "contributors": [{
+    "name": "Crisoforo Gaspar",
+    "email": "github@crisoforo.com"
+  }],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/IonicaBizau/json2md/issues"
