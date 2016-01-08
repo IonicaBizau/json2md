@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha test"
+    "test": "node test"
   },
   "repository": {
     "type": "git",
@@ -21,10 +21,12 @@
     "generator"
   ],
   "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
-  "contributors": [{
-    "name": "Crisoforo Gaspar",
-    "email": "github@crisoforo.com"
-  }],
+  "contributors": [
+    {
+      "name": "Crisoforo Gaspar",
+      "email": "github@crisoforo.com"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/IonicaBizau/json2md/issues"
@@ -39,6 +41,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "mocha": "^2.3.3"
+    "tester": "^1.3.0"
   }
 }
