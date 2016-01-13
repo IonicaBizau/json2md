@@ -171,13 +171,25 @@ tester.describe("json2md", test => {
         cb();
     });
 
-    test.it('should support tables', function(cb) {
+    test.it('should support tables, rows is objects', function(cb) {
         test.expect(json2md({
             table: {
                 headers: ['a', 'b']
-              , rows: [{a:1, b:2}]
+              , rows: [{a:'col1', b:'col2'}]
             }
-        })).toBe("a | b\n--- | ---\n1 | 2");
+        })).toBe("a | b\n--- | ---\ncol1 | col2");
+        cb();
+    })
+
+    test.it('should support tables, rows is arrays', function(cb) {
+        test.expect(json2md({
+            table: {
+                headers: ['a', 'b']
+              , rows: [
+                    ['col1', 'col2']
+                ]
+            }
+        })).toBe("a | b\n--- | ---\ncol1 | col2");
         cb();
     })
 });
