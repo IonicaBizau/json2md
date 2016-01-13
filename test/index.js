@@ -170,4 +170,14 @@ tester.describe("json2md", test => {
 `);
         cb();
     });
+
+    test.it('should support tables', function(cb) {
+        test.expect(json2md({
+            table: {
+                headers: ['a', 'b']
+              , rows: [{a:1, b:2}]
+            }
+        })).toBe("a | b\n--- | ---\n1 | 2");
+        cb();
+    })
 });
