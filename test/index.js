@@ -170,4 +170,10 @@ tester.describe("json2md", test => {
 `);
         cb();
     });
+
+    test.it("should work when input is number", function (cb) {
+        test.expect(json2md({ blockquote: 123 })).toBe("> 123\n");
+        cb();
+    });
+
 });
