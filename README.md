@@ -1,8 +1,8 @@
 [![json2md](http://i.imgur.com/uj64JFw.png)](#)
 
-# json2md [![Support this project][donate-now]][paypal-donations]
+# json2md [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Version](https://img.shields.io/npm/v/json2md.svg)](https://www.npmjs.com/package/json2md) [![Downloads](https://img.shields.io/npm/dt/json2md.svg)](https://www.npmjs.com/package/json2md) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
-A JSON to Markdown converter.
+> A JSON to Markdown converter.
 
 If you're looking to use this on the client side, that's also possible. Check out the [`dist`](/dist) directory.
 
