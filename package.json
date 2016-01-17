@@ -1,6 +1,6 @@
 {
   "name": "json2md",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "A JSON to Markdown converter.",
   "main": "lib/index.js",
   "directories": {
@@ -22,7 +22,8 @@
   ],
   "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
   "contributors": [
-    "Crisoforo Gaspar <github@crisoforo.com>"
+    "Crisoforo Gaspar <github@crisoforo.com>",
+    "Dmitry Tsvettsikh <me@reklatsmasters.com>"
   ],
   "license": "MIT",
   "bugs": {
