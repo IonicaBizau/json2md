@@ -150,7 +150,8 @@ If you are using this library in one of your projects, add it in this list. :spa
 
 
  - [`doc-cli`](https://github.com/cnio/doc-cli#readme) (by CNIO)—doc generator for nodejs
- - [`trellolol`](https://github.com/seanohue/trellolol#readme) (by Sean O'Donohue)—Trello JSON to MarkdownI am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah).
+ - [`react-docgen-markdown`](https://github.com/Moezalez/react-docgen-markdown#readme) (by Moritz Sattler)—
+ - [`terraform2md`](https://github.com/shambarick/terraform2md#readme) (by Bryan LOT)—Generate the Markdown from a terraform.tfstate file.I am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah).
 
 ## :scroll: License
 
