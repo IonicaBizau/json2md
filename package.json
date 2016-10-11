@@ -1,6 +1,6 @@
 {
   "name": "json2md",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "description": "A JSON to Markdown converter.",
   "main": "lib/index.js",
   "directories": {
@@ -45,6 +45,7 @@
     "bin/",
     "app/",
     "lib/",
+    "build/",
     "dist/",
     "src/",
     "resources/",
