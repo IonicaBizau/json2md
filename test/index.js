@@ -51,7 +51,7 @@ tester.describe("json2md", test => {
             ul: [
                 "item 1", "item 2"
             ]
-        })).toBe("\n - item 1\n - item 2\n");
+        })).toBe("\n - item 1\n - item 2");
         cb();
     });
 
@@ -60,7 +60,7 @@ tester.describe("json2md", test => {
             ul: [
                 "<em>item 1</em>", "<bold>item 2</bold>"
             ]
-        })).toBe("\n - *item 1*\n - **item 2**\n");
+        })).toBe("\n - *item 1*\n - **item 2**");
         cb();
     });
 
@@ -70,7 +70,7 @@ tester.describe("json2md", test => {
             ol: [
                 "item 1", "item 2"
             ]
-        })).toBe("\n 1. item 1\n 2. item 2\n");
+        })).toBe("\n 1. item 1\n 2. item 2");
         cb();
     });
 
@@ -139,8 +139,7 @@ tester.describe("json2md", test => {
        return a + b;
     }
     sum(1, 2);
-    \`\`\`
-`);
+    \`\`\``);
         cb();
     });
 
@@ -165,8 +164,7 @@ tester.describe("json2md", test => {
        return a + b;
     }
     sum(1, 2);
-    \`\`\`
-`);
+    \`\`\``);
         cb();
     });
 
