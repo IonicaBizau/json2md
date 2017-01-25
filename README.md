@@ -21,8 +21,7 @@ $ npm i --save json2md
 
 
 ```js
-// Dependencies
-var json2md = require("json2md");
+const json2md = require("json2md");
 
 console.log(json2md([
     { h1: "JSON To Markdown" }
@@ -160,8 +159,11 @@ If you are using this library in one of your projects, add it in this list. :spa
 
 
  - [`doc-cli`](https://github.com/cnio/doc-cli#readme) (by CNIO)—doc generator for nodejs
+ - [`gitdox`](https://github.com/danielbastos11/gitdox) (by Daniel Bastos)—jsdoc-based github readme generator
  - [`react-docgen-markdown`](https://github.com/Moezalez/react-docgen-markdown#readme) (by Moritz Sattler)—
- - [`terraform2md`](https://github.com/shambarick/terraform2md#readme) (by Bryan LOT)—Generate the Markdown from a terraform.tfstate file.I am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah).
+ - [`terraform2md`](https://github.com/shambarick/terraform2md#readme) (by Bryan LOT)—Generate the Markdown from a terraform.tfstate file.
+ - [`utterance-to-markdown`](https://npmjs.com/package/utterance-to-markdown) (by Shaun Warman)—A simple utterance file to markdown text parser
+ - [`uxcore-tools`](https://npmjs.com/package/uxcore-tools) (by eternalsky)—development tools for uxcoreI am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah).
 
 ## :scroll: License
 
