@@ -1,5 +1,4 @@
-// Dependencies
-var json2md = require("../lib");
+const json2md = require("../lib");
 
 console.log(json2md([
     { h1: "JSON To Markdown" }
