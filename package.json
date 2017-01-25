@@ -38,7 +38,9 @@
       "I am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah)."
     ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "indento": "^1.1.7"
+  },
   "devDependencies": {
     "tester": "^1.3.0"
   },
