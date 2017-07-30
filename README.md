@@ -35,7 +35,7 @@ console.log(json2md([
   , { h2: "Features" }
   , { ul: [
         "Easy to use"
-      , "You can programatically generate Markdown content"
+      , "You can programmatically generate Markdown content"
       , "..."
       ]
     }
@@ -72,7 +72,7 @@ console.log(json2md([
 // ## Features
 //
 //  - Easy to use
-//  - You can programatically generate Markdown content
+//  - You can programmatically generate Markdown content
 //  - ...
 //
 // ## How to contribute
