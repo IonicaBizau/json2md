@@ -1,4 +1,4 @@
-const json2md = require("../lib");
+const json2md = require("../lib")
 
 console.log(json2md([
     { h1: "JSON To Markdown" }
@@ -29,13 +29,13 @@ console.log(json2md([
         language: "js"
       , content: [
           "function sum (a, b) {"
-        , "   return a + b;"
+        , "   return a + b"
         , "}"
-        , "sum(1, 2);"
+        , "sum(1, 2)"
         ]
       }
     }
-]));
+]))
 // =>
 // # JSON To Markdown
 // > A JSON to Markdown converter.
@@ -64,7 +64,7 @@ console.log(json2md([
 //
 // ```js
 // function sum (a, b) {
-//    return a + b;
+//    return a + b
 // }
-// sum(1, 2);
+// sum(1, 2)
 // ```
