@@ -27,18 +27,19 @@ You can extend the `json2md.converters` object to support your custom types.
 
 ```js
 json2md.converters.sayHello = function (input, json2md) {
-   return "Hello " + input + "!";
-};
+   return "Hello " + input + "!"
+}
 ```
 
 Then you can use it:
 
 ```js
-json2md({ sayHello: "World" });
+json2md({ sayHello: "World" })
 // => "Hello World!"
 ```
 
 #### Params
+
 - **Array|Object|String** `data`: The input JSON data.
 - **String** `prefix`: A snippet to add before each line.
 
