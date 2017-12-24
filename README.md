@@ -14,7 +14,11 @@ If you're looking to use this on the client side, that's also possible. Check ou
 ## :cloud: Installation
 
 ```sh
-$ npm i --save json2md
+# Using npm
+npm install --save json2md
+
+# Using yarn
+yarn add json2md
 ```
 
 
@@ -103,7 +107,9 @@ There are few ways to get help:
 
  1. Please [post questions on Stack Overflow](https://stackoverflow.com/questions/ask). You can open issues with questions, as long you add a link to your Stack Overflow question.
  2. For bug reports and feature requests, open issues. :bug:
+
  3. For direct and quick help, you can [use Codementor](https://www.codementor.io/johnnyb). :rocket:
+
 
 
 ## :memo: Documentation
@@ -182,12 +188,12 @@ If you are using this library in one of your projects, add it in this list. :spa
 
 
  - [`doc-cli`](https://github.com/cnio/doc-cli#readme) (by CNIO)—doc generator for nodejs
- - [`fastur`](https://npmjs.com/package/fastur)—fastur
  - [`gitdox`](https://github.com/danielbastos11/gitdox) (by Daniel Bastos)—jsdoc-based github readme generator
  - [`jumia-travel-changelog`](https://github.com/josemsantos/jumia-travel-changelog-generator#readme) (by José Santos)—This tool is meant to automatize the process of creating and maintening a CHANGELOG.md file. Based on github pull requests and milestones it will report a complete list of releases with all events. All future milestones are considered future releases.
  - [`machine-ip`](https://github.com/IonicaBizau/machine-ip#readme)—Update your public ip information in a git repository.
+ - [`make-postgres-markdown`](https://github.com/cazzer/make-postgres-markdown#readme) (by Caleb Brewer)—Builds Slate compatible markdown from a Postgres connection
  - [`p2doc`](https://npmjs.com/package/p2doc) (by jeremaihloo)—A generator to convert postman collections into api docs
- - [`react-docgen-markdown`](https://github.com/Moezalez/react-docgen-markdown#readme) (by Moritz Sattler)—
+ - [`pantheon_site_management`](https://github.com/loudbinary/pantheon_site_management#readme)—CLI Utility to aide in management of Pantheon organizations
  - [`terraform2md`](https://github.com/shambarick/terraform2md#readme) (by Bryan LOT)—Generate the Markdown from a terraform.tfstate file.
  - [`utterance-to-markdown`](https://npmjs.com/package/utterance-to-markdown) (by Shaun Warman)—A simple utterance file to markdown text parser
  - [`uxcore-tools`](https://npmjs.com/package/uxcore-tools) (by eternalsky)—development tools for uxcoreI am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah).
