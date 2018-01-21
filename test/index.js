@@ -208,3 +208,121 @@ tester.describe("json2md", test => {
         cb();
     })
 });
+
+tester.describe("json2md.async", test => {
+    test.it("should return a Promise instance", function(cb) {
+        const p = json2md.async({
+            h1: "Heading 1"
+        }).then(function (result) {
+            test.expect(result).toBe("# Heading 1\n");
+            cb();
+        }).catch(function (err) {
+            cb(err)
+        });
+        test.expect(p instanceof Promise).toBe(true);
+    });
+
+    test.it("should accept an array", function(cb) {
+        const p = json2md.async([
+            { h1: "Heading 1" },
+            { h2: "Heading 2" },
+        ]).then(function (result) {
+            test.expect(result).toBe("# Heading 1\n\n## Heading 2\n");
+            cb();
+        }).catch(function (err) {
+            cb(err)
+        });
+        test.expect(p instanceof Promise).toBe(true);
+    });
+
+    test.it("should have same behaviors to original json2md", function(cb) {
+        Promise.all([
+            json2md.async({
+                h1: "Heading 1"
+            }).then((result) => {
+                test.expect(result).toBe("# Heading 1\n");
+            }),
+
+            json2md.async({
+                h2: "Heading 2"
+            }).then((result) => {
+                test.expect(result).toBe("## Heading 2\n");
+            }),
+
+            json2md.async({
+                h3: "Heading 3"
+            }).then((result) => {
+                test.expect(result).toBe("### Heading 3\n");
+            }),
+
+            json2md.async({
+                blockquote: "Some content"
+            }).then((result) => {
+                test.expect(result).toBe("> Some content\n");
+            }),
+        ]).then(function () {
+            cb();
+        }).catch(function (err) {
+            cb(err)
+        });
+    });
+
+    test.it("should support custom types which have same behaviors to original json2md", function(cb) {
+        json2md.converters.sayHello = function(input, json2md) {
+            return "Hello " + input + "!";
+        };
+
+        json2md.async({
+            sayHello: "World"
+        }).then((result) => {
+            test.expect(result).toBe("Hello World!\n");
+            cb();
+        }).catch(function (err) {
+            cb(err)
+        });
+    });
+
+    test.it("should support async converter", function(cb) {
+        json2md.converters.asyncConvert = function(input, json2md) {
+            return new Promise(function(resolve) {
+                setTimeout(function() {
+                    resolve("Hello " + input + "!");
+                }, 100);
+            });
+        };
+
+        json2md.async({
+            asyncConvert: "World"
+        }).then((result) => {
+            test.expect(result).toBe("Hello World!\n");
+            cb();
+        }).catch(function (err) {
+            cb(err)
+        });
+    });
+
+    test.it("should keep order when async converters finished at different times", function(cb) {
+        json2md.converters.asyncConvert2 = function(input, json2md) {
+            return new Promise(function(resolve) {
+                setTimeout(function() {
+                    resolve("Hello " + input.text + "!");
+                }, input.timeout);
+            });
+        };
+
+        Promise.all([
+            json2md.async([
+                { h1: "Heading 1" },
+                { asyncConvert2: {text: "World", timeout: 200} },
+                { h2: "Heading 2" },
+                { asyncConvert2: {text: "hello", timeout: 100} },
+            ]).then((result) => {
+                test.expect(result).toBe("# Heading 1\n\nHello World!\n\n## Heading 2\n\nHello hello!\n");
+            }),
+        ]).then(function () {
+            cb();
+        }).catch(function (err) {
+            cb(err)
+        });
+    });
+});
