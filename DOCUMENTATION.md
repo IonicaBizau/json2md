@@ -46,3 +46,13 @@ json2md({ sayHello: "World" })
 #### Return
 - **String** The generated markdown result.
 
+### async
+
+#### Params
+
+- **Array|Object|String** `data`: The input JSON data.
+- **String** `prefix`: A snippet to add before each line.
+
+#### Return
+- **Promise.\<String, Error>** The generated markdown result.
+
