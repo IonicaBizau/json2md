@@ -45,6 +45,17 @@ tester.describe("json2md", test => {
         cb();
     });
 
+    // Links
+    test.it("should support links", function(cb) {
+        test.expect(json2md({
+            link: {
+                source: "source",
+                title: "title"
+            }
+        })).toBe("[title](source)\n");
+        cb();
+    });
+
     // Unordered lists
     test.it("should support unordered lists", function(cb) {
         test.expect(json2md({
