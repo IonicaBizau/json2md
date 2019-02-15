@@ -5,9 +5,7 @@
 
 # json2md
 
- [![Support me on Patreon][badge_patreon]][patreon] [![Buy me a book][badge_amazon]][amazon] [![PayPal][badge_paypal_donate]][paypal-donations] [![Ask me anything](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/IonicaBizau/ama) [![Version](https://img.shields.io/npm/v/json2md.svg)](https://www.npmjs.com/package/json2md) [![Downloads](https://img.shields.io/npm/dt/json2md.svg)](https://www.npmjs.com/package/json2md) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
-
-<a href="https://www.buymeacoffee.com/H96WwChMy" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee"></a>
+ [![Support me on Patreon][badge_patreon]][patreon] [![Buy me a book][badge_amazon]][amazon] [![PayPal][badge_paypal_donate]][paypal-donations] [![Ask me anything](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/IonicaBizau/ama) [![Version](https://img.shields.io/npm/v/json2md.svg)](https://www.npmjs.com/package/json2md) [![Downloads](https://img.shields.io/npm/dt/json2md.svg)](https://www.npmjs.com/package/json2md)
 
 > A JSON to Markdown converter.
 
@@ -38,12 +36,6 @@ console.log(json2md([
         { title: "Some image", source: "https://example.com/some-image.png" }
       , { title: "Another image", source: "https://example.com/some-image1.png" }
       , { title: "Yet another image", source: "https://example.com/some-image2.png" }
-      ]
-    }
-  , { link: [
-        { title: "Some link", source: ":https://example.com/link/1" }
-      , { title: "Another link", source: "https://example.com/link/2" }
-      , { title: "Yet another link", source: "https://example.com/link/3" }
       ]
     }
   , { h2: "Features" }
@@ -143,6 +135,7 @@ Converts a JSON input to markdown.
 | `ol`         | Ordered list       | An array of strings representing the items.                                                                              | `{ ol: ["item 1", "item 2"] }`                                                                                                                   |
 | `code`       | Code block element | An object containing the `language` (`String`) and `content` (`Array` or `String`)  fields.                              | `{ code: { "language": "html", "content": "<script src='dummy.js'></script>" } }`                                                                |
 | `table`      | Table              | An object containing the `headers` (`Array` of `String`s) and `rows` (`Array` of `Array`s or `Object`s).                 | `{ table: { headers: ["a", "b"], rows: [{ a: "col1", b: "col2" }] } }` or `{ table: { headers: ["a", "b"], rows: [["col1", "col2"]] } }`         |
+| `link`       | Link               | An object containing the `title` and the `url` fields.                                                                   |
 
 You can extend the `json2md.converters` object to support your custom types.
 
@@ -210,6 +203,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`bookmark2md`](https://npmjs.com/package/bookmark2md) (by acery)—convert your safari bookmark to markdown or json format
  - [`component-docs-2md`](https://npmjs.com/package/component-docs-2md)—Using (react-docgen)[], this module creates docs for your react components folder according to this format:
  - [`doc-cli`](https://github.com/cnio/doc-cli#readme) (by CNIO)—doc generator for nodejs
+ - [`gatsby-source-google-docs`](https://github.com/xuopled/gatsby-source-google-docs#readme) (by Cédric Delpoux)—Gatsby plugin to use google-docs as a data source
  - [`gitdox`](https://github.com/danielbastos11/gitdox) (by Daniel Bastos)—jsdoc-based github readme generator
  - [`jumia-travel-changelog`](https://github.com/josemsantos/jumia-travel-changelog-generator#readme) (by José Santos)—This tool is meant to automatize the process of creating and maintening a CHANGELOG.md file. Based on github pull requests and milestones it will report a complete list of releases with all events. All future milestones are considered future releases.
  - [`lambda-docs-2md`](https://npmjs.com/package/lambda-docs-2md)—Using [jsdoc comments](), this module creates docs for your aws lambda folder according to this format:
@@ -218,6 +212,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`mokker`](https://github.com/fidelman/mokker) (by Andrei Fidelman)—Simple Rest API mock server
  - [`p2doc`](https://npmjs.com/package/p2doc) (by jeremaihloo)—A generator to convert postman collections into api docs
  - [`pantheon_site_management`](https://github.com/loudbinary/pantheon_site_management#readme)—CLI Utility to aide in management of Pantheon organizations
+ - [`rap2doc`](https://github.com/ganl/rap2doc#readme) (by ganl)—rap2 接口导出Markdown
  - [`reposier`](https://www.reposier.com/) (by Alex Lee)—Tasty CLI on the outside, simple integration with GitHub's API on the inside.
  - [`rober19-config`](https://github.com/Rober19/rober19_config#readme) (by Rober19)—config - att: rober19
  - [`terraform2md`](https://github.com/shambarick/terraform2md#readme) (by Bryan LOT)—Generate the Markdown from a terraform.tfstate file.
