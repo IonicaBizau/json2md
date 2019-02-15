@@ -40,6 +40,12 @@ console.log(json2md([
       , { title: "Yet another image", source: "https://example.com/some-image2.png" }
       ]
     }
+  , { link: [
+        { title: "Some link", source: ":https://example.com/link/1" }
+      , { title: "Another link", source: "https://example.com/link/2" }
+      , { title: "Yet another link", source: "https://example.com/link/3" }
+      ]
+    }
   , { h2: "Features" }
   , { ul: [
         "Easy to use"
