@@ -40,6 +40,7 @@ json2md({ sayHello: "World" })
 ```
 
 #### Params
+
 - **Array|Object|String** `data`: The input JSON data.
 - **String** `prefix`: A snippet to add before each line.
 
@@ -49,6 +50,7 @@ json2md({ sayHello: "World" })
 ### async
 
 #### Params
+
 - **Array|Object|String** `data`: The input JSON data.
 - **String** `prefix`: A snippet to add before each line.
 
