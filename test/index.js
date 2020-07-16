@@ -39,9 +39,10 @@ tester.describe("json2md", test => {
         test.expect(json2md({
             img: {
                 source: "source",
-                title: "title"
+                title: "title",
+                alt: 'alt',
             }
-        })).toBe("![title](source)\n");
+        })).toBe('![alt](source "title")\n');
         cb();
     });
 
@@ -203,7 +204,7 @@ tester.describe("json2md", test => {
                     b: "col2"
                 }]
             }
-        })).toBe("a | b\n--- | ---\ncol1 | col2\n");
+        })).toBe(" | a | b | \n | --- | --- | \n | col1 | col2 | \n");
         cb();
     })
 
@@ -215,7 +216,20 @@ tester.describe("json2md", test => {
                     ["col1", "col2"]
                 ]
             }
-        })).toBe("a | b\n--- | ---\ncol1 | col2\n");
+        })).toBe(" | a | b | \n | --- | --- | \n | col1 | col2 | \n");
+        cb();
+    })
+
+    test.it("should support tables aligns", function(cb) {
+        test.expect(json2md({
+            table: {
+                headers: ["a", "b", "c", "d"],
+                rows: [
+                    ["col1", "col2", "col3", "col4"]
+                ],
+                aligns: ["", "center", "left", "right"],
+            }
+        })).toBe(" | a | b | c | d | \n | --- | :---: | :--- | ---: | \n | col1 | col2 | col3 | col4 | \n");
         cb();
     })
 });
