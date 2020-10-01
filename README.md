@@ -192,11 +192,11 @@ Converts a JSON input to markdown.
 | `h6`         | Heading 6          | The heading text as string.                                                                                              | `{ h6: "heading 6" }`                                                                                                                            |
 | `p`          | Paragraphs         | The paragraph text as string or array (multiple paragraphs).                                                             | `{ p: "Hello World"}` or multiple paragraphs: `{ p: ["Hello", "World"] }`                                                                        |
 | `blockquote` | Blockquote         | The blockquote as string or array (multiple blockquotes)                                                                 | `{ blockquote: "Hello World"}` or multiple blockquotes: `{ blockquote: ["Hello", "World"] }`                                                     |
-| `img`        | Image              | An object or an array of objects containing the `title`, `source` and `alt` fields.                                             | `{ img: { title: "My image title", source: "http://example.com/image.png", alt: "My image alt" } }`                                                                   |
+| `img`        | Image              | An object or an array of objects containing the `title`, `source` and `alt`  fields.                                     | `{ img: { title: "My image title", source: "http://example.com/image.png", alt: "My image alt" } }`                                                                   |
 | `ul`         | Unordered list     | An array of strings representing the items.                                                                              | `{ ul: ["item 1", "item 2"] }`                                                                                                                   |
 | `ol`         | Ordered list       | An array of strings representing the items.                                                                              | `{ ol: ["item 1", "item 2"] }`                                                                                                                   |
 | `code`       | Code block element | An object containing the `language` (`String`) and `content` (`Array` or `String`)  fields.                              | `{ code: { "language": "html", "content": "<script src='dummy.js'></script>" } }`                                                                |
-| `table`      | Table              | An object containing the `headers` (`Array` of `String`s), `rows` (`Array` of `Array`s or `Object`s), and [optional] `aligns` (`Array` of `String`s). | `{ table: { headers: ["a", "b"], rows: [{ a: "col1", b: "col2" }], aligns: ["left", "right"] } }` or `{ table: { headers: ["a", "b"], rows: [["col1", "col2"], aligns: ["", "center"] } }`         |
+| `table`      | Table              | An object containing the `headers` (`Array` of `String`s) and `rows` (`Array` of `Array`s or `Object`s).                 | `{ table: { headers: ["a", "b"], rows: [{ a: "col1", b: "col2" }] } }` or `{ table: { headers: ["a", "b"], rows: [["col1", "col2"]] } }`         |
 | `link`       | Link               | An object containing the `title` and the `source` fields.                                                                | `{ title: 'hello', source: 'https://ionicabizau.net' }
 
 You can extend the `json2md.converters` object to support your custom types.
@@ -287,23 +287,23 @@ If you are using this library in one of your projects, add it in this list. :spa
 
  - `@sidneys/releasenotes`
  - `@best/github-integration`
+ - `@microfleet/schema2md`
+ - `@cypress/schema-tools`
  - `lambda-docs-2md`
  - `jumia-travel-changelog`
  - `@cobalt-engine/change-logger`
  - `uxcore-tools`
- - `@cypress/schema-tools`
  - `@best/store`
- - `utterance-to-markdown`
- - `gitdox`
  - `p2doc`
  - `pantheon_site_management`
  - `react-docgen-markdown`
- - `terraform2md`
+ - `utterance-to-markdown`
+ - `gitdox`
  - `doc-cli`
+ - `terraform2md`
  - `component-docs-2md`
  - `reposier`
  - `bookmark2md`
- - `machine-ip`
  - `rap2doc`
  - `make-postgres-markdown`
  - `describe-dependencies`
@@ -319,11 +319,12 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `rober19-config`
  - `solidity-benchmark`
  - `@bonitasoft/dependency-list-to-markdown`
- - `node-red-contrib-json2md`
  - `dokuinjs`
  - `lggn`
- - `@s-ui/changelog`
  - `gatsby-source-google-docs-sheets`
+ - `machine-ip`
+ - `parse-google-docs-json`
+ - `node-red-contrib-json2md`
  - `gatsby-source-google-docs`
  - `@feizheng/react-markdown-props`I am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah).
 
