@@ -101,6 +101,7 @@ console.log(json2md([
         "Fork the project"
       , "Create your branch"
       , "Raise a pull request"
+      , { ul: ["Choose the right name", "Fill the description", "Ask for reviewers"] } 
       ]
     }
   , { h2: "Code blocks" }
@@ -193,8 +194,8 @@ Converts a JSON input to markdown.
 | `p`          | Paragraphs         | The paragraph text as string or array (multiple paragraphs).                                                             | `{ p: "Hello World"}` or multiple paragraphs: `{ p: ["Hello", "World"] }`                                                                        |
 | `blockquote` | Blockquote         | The blockquote as string or array (multiple blockquotes)                                                                 | `{ blockquote: "Hello World"}` or multiple blockquotes: `{ blockquote: ["Hello", "World"] }`                                                     |
 | `img`        | Image              | An object or an array of objects containing the `title`, `source` and `alt`  fields.                                     | `{ img: { title: "My image title", source: "http://example.com/image.png", alt: "My image alt" } }`                                                                   |
-| `ul`         | Unordered list     | An array of strings representing the items.                                                                              | `{ ul: ["item 1", "item 2"] }`                                                                                                                   |
-| `ol`         | Ordered list       | An array of strings representing the items.                                                                              | `{ ol: ["item 1", "item 2"] }`                                                                                                                   |
+| `ul`         | Unordered list     | An array of strings or lists representing the items.                                                                              | `{ ul: ["item 1", { ul: ["item 1", "item 2"] }, "item 2"] }`                                                                                                                   |
+| `ol`         | Ordered list       | An array of strings or lists representing the items.                                                                              | `{ ol: ["item 1", { ol: ["item 1", "item 2"] }, "item 2"] }`                                                                                                                   |
 | `code`       | Code block element | An object containing the `language` (`String`) and `content` (`Array` or `String`)  fields.                              | `{ code: { "language": "html", "content": "<script src='dummy.js'></script>" } }`                                                                |
 | `table`      | Table              | An object containing the `headers` (`Array` of `String`s) and `rows` (`Array` of `Array`s or `Object`s).                 | `{ table: { headers: ["a", "b"], rows: [{ a: "col1", b: "col2" }] } }` or `{ table: { headers: ["a", "b"], rows: [["col1", "col2"]] } }`         |
 | `link`       | Link               | An object containing the `title` and the `source` fields.                                                                | `{ title: 'hello', source: 'https://ionicabizau.net' }
