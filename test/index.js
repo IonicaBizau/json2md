@@ -204,7 +204,7 @@ tester.describe("json2md", test => {
                     b: "col2"
                 }]
             }
-        })).toBe(" | a | b | \n | --- | --- | \n | col1 | col2 | \n");
+        })).toBe("|  a  |  b  |\n| --- | --- |\n| col1 | col2 |\n");
         cb();
     })
 
@@ -216,7 +216,7 @@ tester.describe("json2md", test => {
                     ["col1", "col2"]
                 ]
             }
-        })).toBe(" | a | b | \n | --- | --- | \n | col1 | col2 | \n");
+        })).toBe("|  a  |  b  |\n| --- | --- |\n| col1 | col2 |\n");
         cb();
     })
 
@@ -229,7 +229,32 @@ tester.describe("json2md", test => {
                 ],
                 aligns: ["", "center", "left", "right"],
             }
-        })).toBe(" | a | b | c | d | \n | --- | :---: | :--- | ---: | \n | col1 | col2 | col3 | col4 | \n");
+        })).toBe("|  a  |   b   | c    |    d |\n| --- | :---: | :--- | ---: |\n| col1 | col2 | col3 | col4 |\n");
+        cb();
+    })
+
+    test.it("should support tables and match column name length with dashes", function(cb) {
+        test.expect(json2md({
+            table: {
+                headers: ["name", "amount", "somesuperlongword", "a"],
+                rows: [
+                    ["col1", "col2", "col3", "col4"]
+                ],
+                aligns: ["", "center", "left", "right"],
+            }
+        })).toBe("| name | amount | somesuperlongword |    a |\n| ---- | :----: | :---------------- | ---: |\n| col1 | col2 | col3 | col4 |\n");
+        cb();
+    })
+
+    test.it("should support tables and escape any \"|\"'s", function(cb) {
+        test.expect(json2md({
+            table: {
+                headers: ["a", "b"],
+                rows: [
+                    ["col|1", "col\\|2"]
+                ]
+            }
+        })).toBe("|  a  |  b  |\n| --- | --- |\n| col\\|1 | col\\|2 |\n");
         cb();
     })
 });

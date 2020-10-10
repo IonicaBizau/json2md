@@ -320,14 +320,15 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `rober19-config`
  - `solidity-benchmark`
  - `@bonitasoft/dependency-list-to-markdown`
- - `dokuinjs`
  - `lggn`
  - `gatsby-source-google-docs-sheets`
  - `machine-ip`
  - `parse-google-docs-json`
  - `node-red-contrib-json2md`
- - `gatsby-source-google-docs`
- - `@feizheng/react-markdown-props`I am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah).
+ - `@feizheng/react-markdown-props`
+ - `@s-ui/changelog`
+ - `dokuinjs`
+ - `gatsby-source-google-docs`I am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah).
 
 
 
