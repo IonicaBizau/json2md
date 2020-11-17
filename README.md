@@ -101,7 +101,6 @@ console.log(json2md([
         "Fork the project"
       , "Create your branch"
       , "Raise a pull request"
-      , { ul: ["Choose the right name", "Fill the description", "Ask for reviewers"] } 
       ]
     }
   , { h2: "Code blocks" }
@@ -194,8 +193,8 @@ Converts a JSON input to markdown.
 | `p`          | Paragraphs         | The paragraph text as string or array (multiple paragraphs).                                                             | `{ p: "Hello World"}` or multiple paragraphs: `{ p: ["Hello", "World"] }`                                                                        |
 | `blockquote` | Blockquote         | The blockquote as string or array (multiple blockquotes)                                                                 | `{ blockquote: "Hello World"}` or multiple blockquotes: `{ blockquote: ["Hello", "World"] }`                                                     |
 | `img`        | Image              | An object or an array of objects containing the `title`, `source` and `alt`  fields.                                     | `{ img: { title: "My image title", source: "http://example.com/image.png", alt: "My image alt" } }`                                                                   |
-| `ul`         | Unordered list     | An array of strings or lists representing the items.                                                                              | `{ ul: ["item 1", { ul: ["item 1", "item 2"] }, "item 2"] }`                                                                                                                   |
-| `ol`         | Ordered list       | An array of strings or lists representing the items.                                                                              | `{ ol: ["item 1", { ol: ["item 1", "item 2"] }, "item 2"] }`                                                                                                                   |
+| `ul`         | Unordered list     | An array of strings or lists representing the items.                                                                            | `{ ul: ["item 1", "item 2"] }`                                                                                                                   |
+| `ol`         | Ordered list       | An array of strings or lists representing the items.                                                                             | `{ ol: ["item 1", "item 2"] }`                                                                                                                   |
 | `code`       | Code block element | An object containing the `language` (`String`) and `content` (`Array` or `String`)  fields.                              | `{ code: { "language": "html", "content": "<script src='dummy.js'></script>" } }`                                                                |
 | `table`      | Table              | An object containing the `headers` (`Array` of `String`s) and `rows` (`Array` of `Array`s or `Object`s).                 | `{ table: { headers: ["a", "b"], rows: [{ a: "col1", b: "col2" }] } }` or `{ table: { headers: ["a", "b"], rows: [["col1", "col2"]] } }`         |
 | `link`       | Link               | An object containing the `title` and the `source` fields.                                                                | `{ title: 'hello', source: 'https://ionicabizau.net' }
@@ -287,14 +286,14 @@ Thanks! :heart:
 If you are using this library in one of your projects, add it in this list. :sparkles:
 
  - `@sidneys/releasenotes`
- - `@best/github-integration`
  - `@microfleet/schema2md`
  - `@cypress/schema-tools`
+ - `@best/github-integration`
  - `lambda-docs-2md`
  - `jumia-travel-changelog`
  - `@cobalt-engine/change-logger`
- - `uxcore-tools`
  - `@best/store`
+ - `uxcore-tools`
  - `p2doc`
  - `pantheon_site_management`
  - `react-docgen-markdown`
@@ -325,9 +324,13 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `machine-ip`
  - `parse-google-docs-json`
  - `node-red-contrib-json2md`
- - `@feizheng/react-markdown-props`
- - `@s-ui/changelog`
  - `dokuinjs`
+ - `@feizheng/react-markdown-props`
+ - `@e2y/bdd-dictionary-generator`
+ - `@s-ui/changelog`
+ - `lab-changelog`
+ - `dargstack_rgen`
+ - `@jswork/react-markdown-props`
  - `gatsby-source-google-docs`I am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah).
 
 
