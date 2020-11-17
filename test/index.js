@@ -121,6 +121,24 @@ tester.describe("json2md", test => {
         cb();
     });
 
+    test.it("should support paragraphs with underline", function(cb) {
+        test.expect(json2md({
+            p: [
+                "Two <u>more words</u>", "in this paragraph, <u>right?</u>"
+            ]
+        })).toBe("\nTwo _more words_\n\nin this paragraph, _right?_\n");
+        cb();
+    });
+
+    test.it("should support paragraphs with strikethrough", function(cb) {
+        test.expect(json2md({
+            p: [
+                "Two <strike>more words</strike>", "in this paragraph, <strike>right?</strike>"
+            ]
+        })).toBe("\nTwo ~~more words~~\n\nin this paragraph, ~~right?~~\n");
+        cb();
+    });
+    
     // Custom converters
     test.it("should support custom types", function(cb) {
         json2md.converters.sayHello = function(input, json2md) {
