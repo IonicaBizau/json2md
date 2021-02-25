@@ -57,6 +57,14 @@ tester.describe("json2md", test => {
         cb();
     });
 
+    // Horizontal rule
+    test.it("should support horizontal rule", function(cb) {
+        test.expect(json2md({
+            hr: ''
+        })).toBe("---\n");
+        cb();
+    });
+
     // Unordered lists
     test.it("should support unordered lists", function(cb) {
         test.expect(json2md({
@@ -138,7 +146,7 @@ tester.describe("json2md", test => {
         })).toBe("\nTwo ~~more words~~\n\nin this paragraph, ~~right?~~\n");
         cb();
     });
-    
+
     // Custom converters
     test.it("should support custom types", function(cb) {
         json2md.converters.sayHello = function(input, json2md) {
