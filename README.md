@@ -192,12 +192,13 @@ Converts a JSON input to markdown.
 | `h6`         | Heading 6          | The heading text as string.                                                                                              | `{ h6: "heading 6" }`                                                                                                                            |
 | `p`          | Paragraphs         | The paragraph text as string or array (multiple paragraphs).                                                             | `{ p: "Hello World"}` or multiple paragraphs: `{ p: ["Hello", "World"] }`                                                                        |
 | `blockquote` | Blockquote         | The blockquote as string or array (multiple blockquotes)                                                                 | `{ blockquote: "Hello World"}` or multiple blockquotes: `{ blockquote: ["Hello", "World"] }`                                                     |
-| `img`        | Image              | An object or an array of objects containing the `title`, `source` and `alt`  fields.                                     | `{ img: { title: "My image title", source: "http://example.com/image.png", alt: "My image alt" } }`                                                                   |
-| `ul`         | Unordered list     | An array of strings or lists representing the items.                                                                            | `{ ul: ["item 1", "item 2"] }`                                                                                                                   |
-| `ol`         | Ordered list       | An array of strings or lists representing the items.                                                                             | `{ ol: ["item 1", "item 2"] }`                                                                                                                   |
+| `img`        | Image              | An object or an array of objects containing the `title`, `source` and `alt`  fields.                                     | `{ img: { title: "My image title", source: "http://example.com/image.png", alt: "My image alt" } }`                                              |
+| `ul`         | Unordered list     | An array of strings or lists representing the items.                                                                     | `{ ul: ["item 1", "item 2"] }`                                                                                                                   |
+| `ol`         | Ordered list       | An array of strings or lists representing the items.                                                                     | `{ ol: ["item 1", "item 2"] }`                                                                                                                   |
+| `hr`         | Separator          | None                                                                                                                     | `{ hr: "" }`                                                                                                                                     |
 | `code`       | Code block element | An object containing the `language` (`String`) and `content` (`Array` or `String`)  fields.                              | `{ code: { "language": "html", "content": "<script src='dummy.js'></script>" } }`                                                                |
 | `table`      | Table              | An object containing the `headers` (`Array` of `String`s) and `rows` (`Array` of `Array`s or `Object`s).                 | `{ table: { headers: ["a", "b"], rows: [{ a: "col1", b: "col2" }] } }` or `{ table: { headers: ["a", "b"], rows: [["col1", "col2"]] } }`         |
-| `link`       | Link               | An object containing the `title` and the `source` fields.                                                                | `{ title: 'hello', source: 'https://ionicabizau.net' }`
+| `link`       | Link               | An object containing the `title` and the `source` fields.                                                                | `{ title: 'hello', source: 'https://ionicabizau.net' }`                                                                                          |
 
 You can extend the `json2md.converters` object to support your custom types.
 
@@ -287,13 +288,13 @@ If you are using this library in one of your projects, add it in this list. :spa
 
  - `@sidneys/releasenotes`
  - `@microfleet/schema2md`
- - `@best/github-integration`
  - `@cypress/schema-tools`
+ - `@best/github-integration`
  - `lambda-docs-2md`
  - `jumia-travel-changelog`
  - `@cobalt-engine/change-logger`
- - `@best/store`
  - `uxcore-tools`
+ - `@best/store`
  - `p2doc`
  - `pantheon_site_management`
  - `react-docgen-markdown`
@@ -324,17 +325,17 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `parse-google-docs-json`
  - `node-red-contrib-json2md`
  - `dokuinjs`
- - `@feizheng/react-markdown-props`
- - `@e2y/bdd-dictionary-generator`
- - `@s-ui/changelog`
  - `lab-changelog`
- - `@jswork/react-markdown-props`
- - `@gracexwho/model-card-generator`
  - `@bwagener/gridsome-source-google-docs`
  - `asm-auto-deploy`
  - `type-graphql-to-md`
+ - `@gracexwho/model-card-generator`
  - `gatsby-source-google-docs`
- - `dargstack_rgen`I am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah).
+ - `@e2y/bdd-dictionary-generator`
+ - `@s-ui/changelog`
+ - `dargstack_rgen`
+ - `@feizheng/react-markdown-props`
+ - `@jswork/react-markdown-props`I am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah).
 
 
 
