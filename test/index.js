@@ -228,9 +228,12 @@ tester.describe("json2md", test => {
                 rows: [{
                     a: "col1",
                     b: "col2"
+                }, {
+                    a: "col1",
+                    b: "col2"
                 }]
             }
-        })).toBe("|  a  |  b  |\n| --- | --- |\n| col1 | col2 |\n");
+        })).toBe("|  a  |  b  |\n| --- | --- |\n| col1 | col2 |\n| col1 | col2 |\n");
         cb();
     })
 
@@ -239,10 +242,11 @@ tester.describe("json2md", test => {
             table: {
                 headers: ["a", "b"],
                 rows: [
+                    ["col1", "col2"],
                     ["col1", "col2"]
                 ]
             }
-        })).toBe("|  a  |  b  |\n| --- | --- |\n| col1 | col2 |\n");
+        })).toBe("|  a  |  b  |\n| --- | --- |\n| col1 | col2 |\n| col1 | col2 |\n");
         cb();
     })
 
