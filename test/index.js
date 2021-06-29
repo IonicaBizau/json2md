@@ -228,9 +228,12 @@ tester.describe("json2md", test => {
                 rows: [{
                     a: "col1",
                     b: "col2"
+                }, {
+                    a: "col1",
+                    b: "col2 very long"
                 }]
             }
-        })).toBe("|  a  |  b  |\n| --- | --- |\n| col1 | col2 |\n");
+        })).toBe("|  a  |  b  |\n| --- | --- |\n| col1 | col2 |\n| col1 | col2 very long |\n");
         cb();
     })
 
@@ -239,10 +242,11 @@ tester.describe("json2md", test => {
             table: {
                 headers: ["a", "b"],
                 rows: [
+                    ["col1", "col2"],
                     ["col1", "col2"]
                 ]
             }
-        })).toBe("|  a  |  b  |\n| --- | --- |\n| col1 | col2 |\n");
+        })).toBe("|  a  |  b  |\n| --- | --- |\n| col1 | col2 |\n| col1 | col2 |\n");
         cb();
     })
 
@@ -283,6 +287,65 @@ tester.describe("json2md", test => {
         })).toBe("|  a  |  b  |\n| --- | --- |\n| col\\|1 | col\\|2 |\n");
         cb();
     })
+
+    test.it("should support pretty tables, rows is objects", function(cb) {
+        test.expect(json2md({
+            table: {
+                pretty: true,
+                headers: ["a", "b"],
+                rows: [{
+                    a: "col1",
+                    b: "col2"
+                }, {
+                    a: "col1",
+                    b: "col2 very long"
+                }]
+            }
+        })).toBe(`|  a   |       b        |
+| ---- | -------------- |
+| col1 | col2           |
+| col1 | col2 very long |
+`);
+        cb();
+    })
+
+    test.it("should support pretty tables, rows is array", function(cb) {
+        test.expect(json2md({
+            table: {
+                pretty: true,
+                headers: ["a", "b"],
+                rows: [
+                    ["col1", "col2"],
+                    ["col1", "col2 very long"]
+                ]
+            }
+        })).toBe(`|  a   |       b        |
+| ---- | -------------- |
+| col1 | col2           |
+| col1 | col2 very long |
+`);
+        cb();
+    })
+
+    test.it("should support pretty tables aligns", function(cb) {
+        test.expect(json2md({
+            table: {
+                pretty: true,
+                aligns: ['left', 'right'],
+                headers: ["a", "b"],
+                rows: [
+                    ["col1", "col2"],
+                    ["col1", "col2 very long"]
+                ]
+            }
+        })).toBe(`| a    |              b |
+| :--- | -------------: |
+| col1 |           col2 |
+| col1 | col2 very long |
+`);
+        cb();
+    })
+
 });
 
 tester.describe("json2md.async", test => {
