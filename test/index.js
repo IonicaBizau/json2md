@@ -94,6 +94,16 @@ tester.describe("json2md", test => {
         cb();
     });
 
+    // task lists
+    test.it("should support task lists", function(cb) {
+        test.expect(json2md({
+            taskLists: [
+                { title: "item 1" }, { title: "item 2", isDone: true }, "item 3"
+            ]
+        })).toBe("\n - [ ] item 1\n - [x] item 2\n - [ ] item 3\n");
+        cb();
+    });
+
     // Code blocks
     test.it("should support code blocks", function(cb) {
         test.expect(json2md({
