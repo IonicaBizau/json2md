@@ -41,10 +41,10 @@
     ]
   },
   "dependencies": {
-    "indento": "^1.1.7"
+    "indento": "^1.1.13"
   },
   "devDependencies": {
-    "tester": "^1.3.0"
+    "tester": "^1.4.5"
   },
   "files": [
     "bin/",

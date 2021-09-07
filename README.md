@@ -195,7 +195,6 @@ Converts a JSON input to markdown.
 | `img`        | Image              | An object or an array of objects containing the `title`, `source` and `alt`  fields.                                     | `{ img: { title: "My image title", source: "http://example.com/image.png", alt: "My image alt" } }`                                              |
 | `ul`         | Unordered list     | An array of strings or lists representing the items.                                                                     | `{ ul: ["item 1", "item 2"] }`                                                                                                                   |
 | `ol`         | Ordered list       | An array of strings or lists representing the items.                                                                     | `{ ol: ["item 1", "item 2"] }`                                                                                                                   |
-| `taskLists`  | Task list          | An array of strings or array of task objects or lists representing the items.                                            | `{ taskLists: [{ title: "item 1" }, { title: "item 2", isDone: true }, "item 3"]`                                                                |
 | `hr`         | Separator          | None                                                                                                                     | `{ hr: "" }`                                                                                                                                     |
 | `code`       | Code block element | An object containing the `language` (`String`) and `content` (`Array` or `String`)  fields.                              | `{ code: { "language": "html", "content": "<script src='dummy.js'></script>" } }`                                                                |
 | `table`      | Table              | An object containing the `headers` (`Array` of `String`s) and `rows` (`Array` of `Array`s or `Object`s).                 | `{ table: { headers: ["a", "b"], rows: [{ a: "col1", b: "col2" }] } }` or `{ table: { headers: ["a", "b"], rows: [["col1", "col2"]] } }`         |
@@ -322,7 +321,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@bonitasoft/dependency-list-to-markdown`
  - `lggn`
  - `machine-ip`
- - `parse-google-docs-json`
  - `node-red-contrib-json2md`
  - `dokuinjs`
  - `lab-changelog`
@@ -334,17 +332,19 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@klarna/postgres-to-docs`
  - `@dididc/dc-extension`
  - `@e2y/bdd-dictionary-generator`
- - `github-repo-tools`
- - `uxcore-tools`
  - `@hitorisensei/monorepo-readme-generator`
+ - `uxcore-tools`
  - `type-graphql-to-md`
+ - `heat-sfdx-tooling`
+ - `dargstack_rgen`
+ - `@flive/react-kit`
+ - `@hitorisensei/markdown-readme-generator`
+ - `github-repo-tools`
  - `collman`
+ - `parse-google-docs-json`
  - `gatsby-source-google-docs`
  - `@apica-io/asm-auto-deploy`
- - `heat-sfdx-tooling`
- - `@jswork/react-markdown-props`
- - `@discordoo/taapok`
- - `dargstack_rgen`I am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah).
+ - `@jswork/react-markdown-props`I am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah).
 
 
 
