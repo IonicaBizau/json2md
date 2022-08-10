@@ -355,6 +355,19 @@ tester.describe("json2md", test => {
 `);
         cb();
     })
+    
+    test.it("should support several top-level object keys",
+    	function(cb) {
+			json2md.converters.sayHello = function(input, json2md) {
+				return "Hello " + input + "!";
+			};
+			test.expect(json2md({
+				sayHello: "World",
+				h1: "Hello Friends!"
+			})).toBe("Hello World!\n# Hello Friends!\n")
+			cb();
+    	}
+    );
 
 });
 
