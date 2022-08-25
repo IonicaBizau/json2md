@@ -356,6 +356,25 @@ tester.describe("json2md", test => {
         cb();
     })
 
+    test.it("should support tables with links", function(cb) {
+        test.expect(json2md({
+            table: {
+                headers: ["a", "b"],
+                rows: [
+                    {
+                        a: {
+                            link: {
+                                title: "aTitle",
+                                source: "http://www.example.com"
+                            }
+                        },
+                        b: "col2"
+                    }
+                ],
+            }
+        })).toBe('|  a  |  b  |\n| --- | --- |\n| [aTitle](http://www.example.com) | col2 |\n');
+        cb();
+    })
 });
 
 tester.describe("json2md.async", test => {
