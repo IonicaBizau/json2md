@@ -46,6 +46,27 @@ tester.describe("json2md", test => {
         cb();
     });
 
+    // Image array
+    test.it("should support an array of images", function(cb) {
+        test.expect(json2md({
+            img:[{
+                source: "source",
+                title: "title",
+                alt: 'alt',
+            }, {
+                source: "sauce",
+                title: "heading",
+                alt: 'salt',
+            }]
+        })).toBe([
+            '![alt](source "title")',
+            '',
+            '![salt](sauce "heading")',
+            '',
+        ].join('\n'));
+        cb();
+    });
+
     // Links
     test.it("should support links", function(cb) {
         test.expect(json2md({
