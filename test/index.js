@@ -63,6 +63,7 @@ tester.describe("json2md", test => {
             '',
             '![salt](sauce "heading")',
             '',
+            '',
         ].join('\n'));
         cb();
     });
@@ -376,7 +377,7 @@ tester.describe("json2md", test => {
 `);
         cb();
     })
-    
+
     test.it("should support several top-level object keys",
     	function(cb) {
 			json2md.converters.sayHello = function(input, json2md) {
