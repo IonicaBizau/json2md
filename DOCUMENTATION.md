@@ -56,5 +56,5 @@ json2md({ sayHello: "World" })
 - **String** `prefix`: A snippet to add before each line.
 
 #### Return
-- **Promise.\<String, Error>** The generated markdown result.
+- **Promise.\<String>** The generated markdown result.
 

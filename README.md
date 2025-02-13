@@ -21,7 +21,7 @@
 
 # json2md
 
- [![Support me on Patreon][badge_patreon]][patreon] [![Buy me a book][badge_amazon]][amazon] [![PayPal][badge_paypal_donate]][paypal-donations] [![Ask me anything](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/IonicaBizau/ama) [![Version](https://img.shields.io/npm/v/json2md.svg)](https://www.npmjs.com/package/json2md) [![Downloads](https://img.shields.io/npm/dt/json2md.svg)](https://www.npmjs.com/package/json2md) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
+ [![Support me on Patreon][badge_patreon]][patreon] [![Buy me a book][badge_amazon]][amazon] [![PayPal][badge_paypal_donate]][paypal-donations] [![Ask me anything](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/IonicaBizau/ama) [![Version](https://img.shields.io/npm/v/json2md.svg)](https://www.npmjs.com/package/json2md) [![Downloads](https://img.shields.io/npm/dt/json2md.svg)](https://www.npmjs.com/package/json2md) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/@johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
 <a href="https://www.buymeacoffee.com/H96WwChMy" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee"></a>
 
@@ -160,6 +160,7 @@ console.log(json2md([
 
 
 
+
 ## :question: Get Help
 
 There are few ways to get help:
@@ -169,6 +170,8 @@ There are few ways to get help:
  1. Please [post questions on Stack Overflow](https://stackoverflow.com/questions/ask). You can open issues with questions, as long you add a link to your Stack Overflow question.
  2. For bug reports and feature requests, open issues. :bug:
  3. For direct and quick help, you can [use Codementor](https://www.codementor.io/johnnyb). :rocket:
+
+
 
 
 
@@ -231,7 +234,7 @@ json2md({ sayHello: "World" })
 - **String** `prefix`: A snippet to add before each line.
 
 #### Return
-- **Promise.\<String, Error>** The generated markdown result.
+- **Promise.\<String>** The generated markdown result.
 
 
 
@@ -286,111 +289,118 @@ Thanks! :heart:
 ## :dizzy: Where is this library used?
 If you are using this library in one of your projects, add it in this list. :sparkles:
 
- - `@lm_fe/scripts`
- - `@eventcatalog/utils`
- - `@servable/manifest`
- - `@best/github-integration`
- - `@microfleet/schema2md`
- - `@cypress/schema-tools`
- - `@asyncapi/diff`
- - `@sidneys/releasenotes`
- - `merak-compile`
- - `@best/store`
- - `jumia-travel-changelog`
- - `npm-ex-xpi`
- - `doc-vue3`
- - `@feizheng/react-markdown-props`
- - `heat-sfdx-tooling`
- - `@cobalt-engine/change-logger`
- - `lambda-docs-2md`
- - `servable-manifest`
- - `@gracexwho/model-card-generator`
- - `rap2doc`
- - `@dschau/gatsby-source-google-docs`
- - `rush-archive-project-plugin`
- - `sfhdown`
- - `tcdown`
- - `bookmark2md`
- - `cwq`
- - `@bonitasoft/dependency-list-to-markdown`
- - `github-repo-tools`
- - `gridsome-source-google-docs`
- - `notion2mdblog`
- - `kindle-highlights`
- - `make-postgres-markdown`
- - `@dlsl/hardhat-markup`
  - `@aligov/module-doc`
- - `@opas/plugin-doc`
- - `@xygengcn/koa-api-docs`
- - `@dididc/dc-extension`
- - `parse-google-docs-json`
- - `cli-demo3`
- - `gatsby-source-gdocs2md`
- - `kbase-components`
- - `lbdoc-p`
- - `chdown-workers`
- - `@bwagener/gridsome-source-google-docs`
- - `doc-cli`
- - `galaxy-vuepress-docs`
- - `dargstack_rgen`
- - `react-docgen-markdown`
- - `@e2y/bdd-dictionary-generator`
- - `@medyll/css-fabric-helper`
- - `@oasis-engine/oasis-run`
- - `@flive/react-kit`
- - `@shelex/schema-tools`
  - `@apica-io/asm-auto-deploy`
+ - `@asyncapi/diff`
+ - `@balmacefa/function_tool_kit`
+ - `@best/github-integration`
+ - `@best/store`
+ - `@bonitasoft/dependency-list-to-markdown`
+ - `@bwagener/gridsome-source-google-docs`
+ - `@cloudcatalog/cli`
+ - `@cloudcatalog/cli-test`
+ - `@cobalt-engine/change-logger`
+ - `@cypress/schema-tools`
+ - `@dididc/dc-extension`
+ - `@dlsl/hardhat-markup`
+ - `@dschau/gatsby-source-google-docs`
+ - `@e2y/bdd-dictionary-generator`
+ - `@enrico.piccinin/gitlab-tools`
+ - `@eventcatalog/plugin-doc-generator-asyncapi`
+ - `@eventcatalog/utils`
+ - `@eventcatalogtest/plugin-doc-generator-asyncapi`
+ - `@feizheng/react-markdown-props`
+ - `@flive/react-kit`
+ - `@gigsboat/cli`
+ - `@gracexwho/model-card-generator`
  - `@haimmag/schema-tools`
- - `rober19-config`
+ - `@hankanman/postgres-to-docs`
+ - `@hitorisensei/markdown-readme-generator`
+ - `@hitorisensei/monorepo-readme-generator`
+ - `@jswork/react-markdown-props`
  - `@klarna/postgres-to-docs`
+ - `@lm_fe/scripts`
+ - `@medyll/css-fabric-helper`
+ - `@microfleet/schema2md`
+ - `@mjefi/instags`
+ - `@oasis-engine/oasis-run`
+ - `@opas/plugin-doc`
+ - `@s-ui/changelog`
+ - `@servable/manifest`
+ - `@servable/tools`
+ - `@shelex/schema-tools`
+ - `@sidneys/releasenotes`
+ - `@solarity/hardhat-markup`
+ - `@truto/truto-jsonata`
  - `@wii/swagger-plugin-transform-doc`
+ - `@xygengcn/koa-api-docs`
+ - `@yesand/asterism`
+ - `bookmark2md`
+ - `ccdown`
+ - `chdown`
+ - `chdown-workers`
+ - `cli-demo3`
  - `cloudcastsdown`
+ - `codexer`
+ - `collman`
+ - `component-docs-2md`
+ - `cwq`
+ - `dargstack_rgen`
+ - `describe-dependencies`
+ - `doc-cli`
+ - `doc-vue`
+ - `doc-vue3`
+ - `dokuinjs`
  - `eddown`
- - `msdown`
- - `laradown`
- - `my_ccdown`
- - `mokker`
+ - `flawed-code-scanner`
+ - `galaxy-vuepress-docs`
+ - `gatsby-source-gdocs2md`
  - `gatsby-source-google-docs`
  - `gatsby-source-google-docs-sheets`
- - `platzi-virtual-machine`
- - `chdown`
- - `@yesand/asterism`
- - `ccdown`
- - `doc-vue`
- - `@hitorisensei/monorepo-readme-generator`
- - `uxcore-tools`
- - `@gigsboat/cli`
- - `joi-md-doc`
- - `@everything-registry/sub-chunk-1986`
- - `describe-dependencies`
- - `lab-changelog`
- - `node-red-contrib-json2md`
- - `p2doc`
- - `@eventcatalogtest/plugin-doc-generator-asyncapi`
- - `@solarity/hardhat-markup`
- - `@s-ui/changelog`
- - `component-docs-2md`
- - `codexer`
- - `@balmacefa/function_tool_kit`
- - `dokuinjs`
- - `@mjefi/instags`
- - `machine-ip`
- - `flawed-code-scanner`
- - `pantheon_site_management`
- - `postgres-markdown`
- - `reposier`
  - `gatsby-source-google-docs-team`
- - `work-webpack`
- - `vue-md-gen`
- - `@hitorisensei/markdown-readme-generator`
- - `@jswork/react-markdown-props`
- - `terraform2md`
+ - `git-diff-llm`
+ - `github-repo-tools`
+ - `gridsome-source-google-docs`
+ - `heat-sfdx-tooling`
+ - `joi-md-doc`
+ - `jumia-travel-changelog`
+ - `kbase-components`
+ - `kindle-highlights`
+ - `lab-changelog`
+ - `lambda-docs-2md`
+ - `laradown`
+ - `lbdoc-p`
+ - `lggn`
+ - `machine-ip`
+ - `make-postgres-markdown`
+ - `merak-compile`
+ - `mokker`
+ - `msdown`
+ - `my_ccdown`
+ - `mysql-ksdb`
+ - `node-red-contrib-json2md`
+ - `notion2mdblog`
+ - `npm-ex-xpi`
+ - `p2doc`
+ - `pantheon_site_management`
+ - `parse-google-docs-json`
+ - `platzi-virtual-machine`
+ - `postgres-markdown`
+ - `rap2doc`
+ - `react-docgen-markdown`
+ - `reposier`
+ - `rober19-config`
+ - `rush-archive-project-plugin`
+ - `sfhdown`
  - `solidity-benchmark`
- - `utterance-to-markdown`
- - `@eventcatalog/plugin-doc-generator-asyncapi`
+ - `tcdown`
+ - `terraform2md`
  - `type-graphql-to-md`
- - `@cloudcatalog/cli`
- - `@cloudcatalog/cli-test`I am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah).
+ - `utterance-to-markdown`
+ - `uxcore-tools`
+ - `vue-md-gen`
+ - `vue2markdown`
+ - `work-webpack`I am using this library to generate documentation for my projects, being integrated with [blah](https://github.com/IonicaBizau/node-blah).
 
 
 
