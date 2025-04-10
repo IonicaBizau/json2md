@@ -326,17 +326,17 @@ tester.describe("json2md", test => {
                 pretty: true,
                 headers: ["a", "b"],
                 rows: [{
-                    a: "col1",
+                    a: 1000,
                     b: "col2"
                 }, {
-                    a: "col1",
+                    a: 1000,
                     b: "col2 very long"
                 }]
             }
         })).toBe(`|  a   |       b        |
 | ---- | -------------- |
-| col1 | col2           |
-| col1 | col2 very long |
+| 1000 | col2           |
+| 1000 | col2 very long |
 `);
         cb();
     })
