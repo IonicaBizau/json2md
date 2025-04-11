@@ -160,23 +160,6 @@ console.log(json2md([
 
 
 
-
-## :question: Get Help
-
-There are few ways to get help:
-
-
-
- 1. Please [post questions on Stack Overflow](https://stackoverflow.com/questions/ask). You can open issues with questions, as long you add a link to your Stack Overflow question.
- 2. For bug reports and feature requests, open issues. :bug:
- 3. For direct and quick help, you can [use Codementor](https://www.codementor.io/johnnyb). :rocket:
-
-
-
-
-
-
-
 ## :memo: Documentation
 
 
@@ -235,6 +218,24 @@ json2md({ sayHello: "World" })
 
 #### Return
 - **Promise.\<String>** The generated markdown result.
+
+
+
+
+
+
+
+
+
+## :question: Get Help
+
+There are few ways to get help:
+
+
+
+ 1. Please [post questions on Stack Overflow](https://stackoverflow.com/questions/ask). You can open issues with questions, as long you add a link to your Stack Overflow question.
+ 2. For bug reports and feature requests, open issues. :bug:
+ 3. For direct and quick help, you can [use Codementor](https://www.codementor.io/johnnyb). :rocket:
 
 
 
@@ -321,16 +322,20 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `@klarna/postgres-to-docs`
  - `@lm_fe/scripts`
  - `@medyll/css-fabric-helper`
+ - `@mfbtech/changelog-generator`
  - `@microfleet/schema2md`
  - `@mjefi/instags`
  - `@oasis-engine/oasis-run`
  - `@opas/plugin-doc`
+ - `@r6d9/kol-tracker`
+ - `@r6d9/kol_tracker`
  - `@s-ui/changelog`
  - `@servable/manifest`
  - `@servable/tools`
  - `@shelex/schema-tools`
  - `@sidneys/releasenotes`
  - `@solarity/hardhat-markup`
+ - `@solarity/hardhat-migrate`
  - `@truto/truto-jsonata`
  - `@wii/swagger-plugin-transform-doc`
  - `@xygengcn/koa-api-docs`
@@ -366,6 +371,8 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `jumia-travel-changelog`
  - `kbase-components`
  - `kindle-highlights`
+ - `kol-tracker`
+ - `kol_analyzer`
  - `lab-changelog`
  - `lambda-docs-2md`
  - `laradown`
@@ -373,6 +380,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - `lggn`
  - `machine-ip`
  - `make-postgres-markdown`
+ - `mcp-douban-server`
  - `merak-compile`
  - `mokker`
  - `msdown`
