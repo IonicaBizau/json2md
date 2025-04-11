@@ -313,10 +313,10 @@ tester.describe("json2md", test => {
             table: {
                 headers: ["a", "b"],
                 rows: [
-                    ["col|1", "col\\|2"]
+                    ["col|1|2", "col\\|3\\|4"]
                 ]
             }
-        })).toBe("|  a  |  b  |\n| --- | --- |\n| col\\|1 | col\\|2 |\n");
+        })).toBe("|  a  |  b  |\n| --- | --- |\n| col\\|1\\|2 | col\\|3\\|4 |\n");
         cb();
     })
 
